@@ -33,16 +33,16 @@ onClick할 때마다 id값은 nextId로 해주고 nextId는 setNextId를 통해 
 filter를 이용해 특정항목을 제거한다.
 예제에서는 doubleclick을 할 때 지워지는식으로 했다.
 
-```javscript
+```javascript
 const onRemove = (id) => {
-    const nextNames = names.filter((name) => name.id !== id);
-    setNames(nextNames);
-  };
+  const nextNames = names.filter((name) => name.id !== id);
+  setNames(nextNames);
+};
 const nameList = names.map((name, index) => (
-    <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
-      {name.text}
-    </li>
-  ));
+  <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+    {name.text}
+  </li>
+));
 ```
 
 ## 새롭게 알게된 것

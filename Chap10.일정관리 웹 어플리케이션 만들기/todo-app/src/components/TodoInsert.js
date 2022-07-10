@@ -38,7 +38,7 @@ const TodoInsert = () => {
   return (
     <>
       <Form>
-        <Input placeholder="TodoInsert"></Input>
+        <Input placeholder="할 일을 입력하세요"></Input>
         <Button type="submit">
           <i className="fa-solid fa-plus"></i>
         </Button>

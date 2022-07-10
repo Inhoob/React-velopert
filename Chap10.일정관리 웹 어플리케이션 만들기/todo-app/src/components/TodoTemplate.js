@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import TodoInsert from './TodoInsert';
 
 const TemplateContainer = styled.div`
   width: 512px;
@@ -22,12 +23,12 @@ const Content = styled.div`
   background: white;
 `;
 
-const TodoTemplate = ({ childeren }) => {
+const TodoTemplate = ({ children }) => {
   return (
     <div>
       <TemplateContainer>
         <AppTitle>일정 관리</AppTitle>
-        <Content>{childeren}Todo앱을 만들자</Content>
+        <Content>{children}</Content>
       </TemplateContainer>
     </div>
   );

@@ -10,6 +10,17 @@ const DivTodoListItem = styled.div`
   & + & {
     border-top: 1px solid #dee2e6;
   }
+  .remove i {
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+    &:hover {
+      color: #ff8787;
+    }
+    color: #ff6b6b;
+    display: flex;
+    align-items: center;
+  }
 `;
 const DivCheckBox = styled.div`
   cursor: pointer;
@@ -23,6 +34,15 @@ const DivCheckBox = styled.div`
     margin-left: 0.5rem;
     flex: 1;
   }
+  &.checked {
+    i {
+      color: #22b8cf;
+    }
+    .text {
+      color: #adb5bd;
+      text-decoration: line-through;
+    }
+  }
 `;
 const TodoListItem = () => {
   return (
@@ -30,7 +50,11 @@ const TodoListItem = () => {
       <DivCheckBox>
         <i class="fa-regular fa-square-check"></i>
         <i class="fa-solid fa-square-check checked"></i>
+        <div className="text">할 일</div>
       </DivCheckBox>
+      <div className="remove">
+        <i class="fa-solid fa-circle-minus"></i>
+      </div>
     </DivTodoListItem>
   );
 };

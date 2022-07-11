@@ -6,12 +6,17 @@ const DivTodoList = styled.div`
   max-height: 513px;
   overflow-y: auto;
 `;
-const TodoList = () => {
+const TodoList = ({ todos, onRemove, onToggle }) => {
   return (
     <DivTodoList>
-      <TodoListItem></TodoListItem>
-      <TodoListItem></TodoListItem>
-      <TodoListItem></TodoListItem>
+      {todos.map((todo) => (
+        <TodoListItem
+          todo={todo}
+          key={todo.id}
+          onRemove={onRemove}
+          onToggle={onToggle}
+        ></TodoListItem>
+      ))}
     </DivTodoList>
   );
 };

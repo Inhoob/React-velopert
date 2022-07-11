@@ -34,15 +34,11 @@ const DivCheckBox = styled.div`
     margin-left: 0.5rem;
     flex: 1;
   }
-  &.checked {
-    i {
-      color: #22b8cf;
-    }
-    .text {
-      color: #adb5bd;
-      text-decoration: line-through;
-    }
-  }
+  //글씨 색깔 변하게
+  /* .text {
+    color: #abd5bd;
+    text-decoration: line-through;
+  } */
 `;
 const TodoListItem = ({ todo, onRemove, onToggle }) => {
   const { id, text, checked } = todo; //todo.text와 todo.checked 구조분해할당

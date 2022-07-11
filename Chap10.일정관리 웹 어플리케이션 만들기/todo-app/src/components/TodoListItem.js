@@ -44,16 +44,21 @@ const DivCheckBox = styled.div`
     }
   }
 `;
-const TodoListItem = () => {
+const TodoListItem = ({ todo, onRemove }) => {
+  const { id, text, checked } = todo; //todo.text와 todo.checked 구조분해할당
   return (
     <DivTodoListItem>
       <DivCheckBox>
-        <i class="fa-regular fa-square-check"></i>
-        <i class="fa-solid fa-square-check checked"></i>
-        <div className="text">할 일</div>
+        {checked ? (
+          <i className="fa-solid fa-square-check checked"></i>
+        ) : (
+          <i className="fa-regular fa-square-check"></i>
+        )}
+
+        <div className="text">{text}</div>
       </DivCheckBox>
-      <div className="remove">
-        <i class="fa-solid fa-circle-minus"></i>
+      <div className="remove" onClick={() => onRemove(id)}>
+        <i className="fa-solid fa-circle-minus"></i>
       </div>
     </DivTodoListItem>
   );

@@ -14,3 +14,5 @@ originalState = 수정하고 싶은 상태 <br>
 draft = 상태를 어떻게 업데이트할지 정의하는 함수
 
 draft 내에서 원하는 값을 변경하면, produce 함수가 불변성 유지를 대신해 주면서 새로운 상태를 생성해준다.
+
+immer를 사용하면 push,splice등의 함수를 사용해도 무방하다.

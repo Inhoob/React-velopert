@@ -11,6 +11,7 @@ function App() {
   const onChange = useCallback(
     (e) => {
       const { name, value } = e.target;
+      console.log(form)
       setForm({
         ...form,
         [name]: [value],
